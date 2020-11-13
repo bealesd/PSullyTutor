@@ -1,0 +1,38 @@
+:host {
+    --component-container-side-margin: minmax(150px, auto);
+    --component-container-middle-col: minmax(700px, 1000px);
+    --component-container-margin-top: 20px;
+}
+@media screen and (max-width: 900px) and (min-width: 700px) {
+    :host {
+        --component-container-middle-col: minmax(600px, 800px);
+        --component-container-side-margin: minmax(50px, auto);
+   }
+}
+@media screen and (max-width: 700px) {
+    :host {
+        --component-container-middle-col: minmax(300px, 600px);
+        --component-container-side-margin: minmax(30px, auto);
+   }
+}
+
+app-menu-bar{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.component-container{
+    margin-top: calc(var(--logo-height) + var(--component-container-margin-top));
+    display: grid;
+    width:100vw;
+    grid-template-columns: var(--component-container-side-margin) var(--component-container-middle-col)var(--component-container-side-margin);
+}
+
+.routed-component{
+    grid-column: 2;
+    padding: 10px;
+    color: black;
+    background-color: rgba(218, 218, 218, 0.5);
+    border-radius: 10px 10px 10px 10px;
+}

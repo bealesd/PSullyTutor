@@ -1,0 +1,63 @@
+:host {
+    --home-text-font: 18px;
+}
+@media screen and (max-width: 700px) and (min-width: 500px) {
+    :host {
+        --home-text-font: 14px;
+   }
+}
+@media screen and (max-width: 500px) {
+    :host {
+       --home-text-font: 12px;
+   }
+}
+
+.home-container{
+    display: grid;
+}
+
+.text-box{
+    display: grid;
+    min-height: 110px;
+    margin-top: 20px;
+    grid-template-columns: 100px auto;
+}
+
+.text-box:nth-of-type(odd)> .home-text{
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.text-box:nth-of-type(even)> .home-text{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-text{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-family: inherit;
+    font-size: var(--home-text-font);
+    grid-column: 2;
+    color: white;
+}
+
+.home-text-header{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.number{
+    font-family: inherit;
+    font-size: 40px;
+    grid-column: 1;
+    color: white;
+    border: solid 5px rgb(128, 128, 128, 0.8);
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
+.number > div{
+    grid-row: 2;
+    margin-left: auto;
+    margin-right: auto;
+}

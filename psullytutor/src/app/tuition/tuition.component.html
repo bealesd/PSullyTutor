@@ -1,0 +1,42 @@
+<div class="tuition-container">
+
+  <div class="sub-heading">Math Tuition</div>
+
+  <div class="tuition-header" >
+    <span (click)="showText($event)" id="gcse">GCSE</span>
+  </div>
+  <div *ngIf="gcse" class="tuition-text">
+    From years 9 – 11 students can be accommodated in 1:1 tutoring or in small groups.
+    Intensive preparation for GCSE exams is a key element of our service.
+    We have undertaken tuition for all examination board syllabuses: AQA, Edexcel, OCR, WJEC, iGCSE.
+  </div>
+
+  <div class="tuition-header" >
+    <span (click)="showText($event)" id="gcseRetake">GCSE Retake</span>
+  </div>
+  <div *ngIf="gcseRetake" class="tuition-text">
+    Crash course available for November re-take exams to gain that elusive level 4.
+  </div>
+
+  <div class="tuition-header" >
+    <span (click)="showText($event)" id="alevel">A-Level</span>
+  </div>
+  <div *ngIf="alevel" class="tuition-text">
+    We have provided tuition across the examination board syllabuses: AQA, Edexcel, OCR, and the International Baccalaureate Diploma.
+    Tuition can be on a 1:1 or small group basis.
+    This helps students prepare for their entry to University or work placements.
+  </div>
+
+  <div class="tuition-header" >
+    <span (click)="showText($event)" id="beyond">And Beyond</span>
+  </div>
+  <div *ngIf="beyond" class="tuition-text">
+    We have also been providing tuition for post-18 education requirements.
+    For example:
+    Entry examinations for teacher training
+    Apprentice engineering courses
+    Nursing education requirements
+    On line aptitude tests for career development opportunities
+  </div>
+
+</div>
