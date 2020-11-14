@@ -1,0 +1,10 @@
+<div class="sub-heading">Testimonials</div>
+
+<div class="testimonials-container">
+
+    <div *ngFor="let text of testimonialTexts; let i = index" class="testimonial-text">
+        <div (click)="expand($event, i)">
+            {{text}}
+        </div>
+    </div>
+</div>

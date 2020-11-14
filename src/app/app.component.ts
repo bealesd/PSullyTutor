@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(router:Router) {
     router.events.forEach((event) => {
       if(event instanceof NavigationStart) {
-        if (['testimonials', 'home'].includes(event.url.split('/')[1]))
+        if (['testimonials', 'home', ''].includes(event.url.split('/')[1]))
           this.colredBackground = false;
         else
           this.colredBackground = true;

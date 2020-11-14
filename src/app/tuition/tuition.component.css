@@ -28,6 +28,10 @@
 
 .tuition-header>span:hover {
     border-bottom: black 2px solid;
+    /* cursor: pointer; */
+}
+
+.tuition-header:hover {
     cursor: pointer;
 }
 

@@ -1,0 +1,63 @@
+.contact-text {
+    font-size: 16px;
+}
+
+button {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.green-button {
+    background-color: #1fb123;
+    border: 1px solid darkgreen;
+}
+
+.green-button:hover {
+    background-color: darkgreen;
+    border: 1px solid #1fb123;
+}
+
+input#name,
+input#message {
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.form {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: 40px 20px 40px 20px 40px;
+}
+
+input#name {
+    grid-row: 1;
+    grid-column: 1/11;
+}
+
+input#message {
+    grid-row: 3;
+    grid-column: 1/11;
+}
+
+.reset {
+    grid-row: 5;
+    grid-column: 1/5;
+}
+
+.send {
+    grid-row: 5;
+    grid-column: 7/11;
+}
+
+.email {
+    padding-top: 20px;
+}
+
+.email:hover {
+    cursor: pointer;
+}

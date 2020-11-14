@@ -79,6 +79,10 @@ img {
     cursor: pointer;
 }
 
+.menu-link:focus {
+    outline: none;
+}
+
 .menu-link:nth-of-type(1):hover {
     background-color: var(--green);
 }
