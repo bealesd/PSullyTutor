@@ -1,46 +1,49 @@
 :root {
     --logo-height: 100px;
 }
+
 @media screen and (max-width: 900px) and (min-width: 700px) {
-    :root {
+     :root {
         --logo-height: 80px;
-   }
+    }
 }
+
 @media screen and (max-width: 700px) and (min-width: 500px) {
-    :root {
+     :root {
         --logo-height: 55px;
-   }
+    }
 }
+
 @media screen and (max-width: 500px) and (min-width: 400px) {
-    :root {
+     :root {
         --logo-height: 50px;
-   }
+    }
 }
+
 @media screen and (max-width: 400px) {
-    :root {
-       --logo-height: 40px;
-   }
+     :root {
+        --logo-height: 40px;
+    }
 }
 
 body {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     margin: 0px;
     font-family: 'Space Mono';
-
-    background: url('assets/images/pexels-pixabay-53621.jpg') no-repeat center center fixed, lightgray;  
+    background: url('assets/images/pexels-pixabay-53621.jpg') no-repeat center center fixed, lightgray;
     background-size: cover;
 }
 
-.mask{
-    background: rgba(187, 185, 185, 0.5);
+.mask {
+    background: rgba(234, 233, 233, 0.9);
     min-height: calc(100vh);
     width: 100%;
     height: 100%;
     overflow: auto;
 }
 
-.sub-heading{
+.sub-heading {
     font-family: inherit;
     font-size: 28px;
     font-weight: bold;

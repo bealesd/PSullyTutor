@@ -1,37 +1,67 @@
 :host {
     --home-text-font: 18px;
 }
+
 @media screen and (max-width: 700px) and (min-width: 500px) {
-    :host {
+     :host {
         --home-text-font: 14px;
-   }
-}
-@media screen and (max-width: 500px) {
-    :host {
-       --home-text-font: 12px;
-   }
+    }
 }
 
-.home-container{
+@media screen and (max-width: 500px) {
+     :host {
+        --home-text-font: 12px;
+    }
+}
+
+.home-container {
     display: grid;
 }
 
-.text-box{
+.text-box {
     display: grid;
     min-height: 110px;
     margin-top: 20px;
     grid-template-columns: 100px auto;
 }
 
-.text-box:nth-of-type(odd)> .home-text{
-    background-color: rgba(128, 128, 128, 0.7);
+.text-box:nth-of-type(1)>.home-text {
+    background-color: var(--green);
 }
 
-.text-box:nth-of-type(even)> .home-text{
-    background-color: rgba(0, 0, 0, 0.7);
+.text-box:nth-of-type(2)>.home-text {
+    background-color: var(--red);
 }
 
-.home-text{
+.text-box:nth-of-type(3)>.home-text {
+    background-color: var(--blue);
+}
+
+.text-box:nth-of-type(4)>.home-text {
+    background-color: var(--yellow);
+}
+
+.text-box:nth-of-type(1)>.number {
+    border: var(--green) 2px solid;
+    color: var(--green);
+}
+
+.text-box:nth-of-type(2)>.number {
+    border: var(--red) 2px solid;
+    color: var(--red);
+}
+
+.text-box:nth-of-type(3)>.number {
+    border: var(--blue) 2px solid;
+    color: var(--blue);
+}
+
+.text-box:nth-of-type(4)>.number {
+    border: var(--yellow) 2px solid;
+    color: var(--yellow);
+}
+
+.home-text {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
@@ -39,24 +69,23 @@
     font-size: var(--home-text-font);
     grid-column: 2;
     color: white;
+    /* text-shadow: 1px 1px black; */
 }
 
-.home-text-header{
+.home-text-header {
     font-size: 22px;
     font-weight: bold;
 }
 
-.number{
+.number {
     font-family: inherit;
     font-size: 40px;
     grid-column: 1;
-    color: white;
-    border: solid 5px rgb(128, 128, 128, 0.8);
     display: grid;
     grid-template-rows: repeat(3, auto);
 }
 
-.number > div{
+.number>div {
     grid-row: 2;
     margin-left: auto;
     margin-right: auto;

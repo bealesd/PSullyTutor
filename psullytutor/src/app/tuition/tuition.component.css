@@ -1,34 +1,37 @@
 :host {
     --home-text-font: 24px;
 }
+
 @media screen and (max-width: 700px) and (min-width: 500px) {
-    :host {
+     :host {
         --home-text-font: 20px;
-   }
-}
-@media screen and (max-width: 500px) {
-    :host {
-       --home-text-font: 18px;
-   }
+    }
 }
 
-.tuition-header{
+@media screen and (max-width: 500px) {
+     :host {
+        --home-text-font: 18px;
+    }
+}
+
+.tuition-header {
     padding-top: 7px;
     padding-bottom: 7px;
     font-size: 28px;
 }
 
-.tuition-header>span{
+.tuition-header>span {
     text-decoration: none;
-    border-bottom: transparent 1px solid;
+    border-bottom: transparent 2px solid;
     transition: 1000ms;
 }
-.tuition-header>span:hover{
-    border-bottom: black 1px solid;
+
+.tuition-header>span:hover {
+    border-bottom: black 2px solid;
     cursor: pointer;
 }
 
-.tuition-text{
+.tuition-text {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
