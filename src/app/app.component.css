@@ -33,7 +33,7 @@ app-menu-bar {
 .component-container {
     margin-top: calc(var(--logo-height) + var(--component-container-margin-top));
     display: grid;
-    width: 100vw;
+    /* width: 100vw; */
     grid-template-columns: var(--component-container-side-margin) var(--component-container-middle-col) var(--component-container-side-margin);
 }
 
