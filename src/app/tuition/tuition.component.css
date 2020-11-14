@@ -14,6 +14,10 @@
     }
 }
 
+.tuition-container{
+    color:white;
+}
+
 .tuition-header {
     padding-top: 7px;
     padding-bottom: 7px;
@@ -27,7 +31,7 @@
 }
 
 .tuition-header>span:hover {
-    border-bottom: black 2px solid;
+    border-bottom: white 2px solid;
     /* cursor: pointer; */
 }
 

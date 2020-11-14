@@ -3,7 +3,7 @@
     --component-container-middle-col: minmax(700px, 1000px);
     --component-container-margin-top: 20px;
     --navbar-bg-color: rgb(238, 238, 238);
-    --main-container-bg-color: rgb(238, 238, 238);
+    --main-container-bg-color: rgba(238, 238, 238, 0.9);
     --yellow: rgba(255, 132, 0, 0.7);
     --blue: rgba(0, 14, 214, 0.7);
     --red: rgba(255, 0, 0, 0.7);
@@ -45,5 +45,5 @@ app-menu-bar {
 }
 
 .colored-bg {
-    background-color: var(--main-container-bg-color);
+    background-color: var(--blue);
 }

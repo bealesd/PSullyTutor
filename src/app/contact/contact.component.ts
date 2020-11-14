@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  newline = '%0D%0A';
 
   constructor() { }
 
@@ -20,7 +21,7 @@ export class ContactComponent implements OnInit {
       return '';
     }
 
-    return `Name: ${name}.%0D%0AMessage: ${message}.`;
+    return `Name: ${name}.${this.newline}${this.newline}Message: ${message}.`;
   }
 
   reset() {
@@ -33,7 +34,8 @@ export class ContactComponent implements OnInit {
     if(body === ''){
       return;
     }
-    window.location.href = `mailto:phylsully@blueyonder.co.uk&subject=Email from PSullyLtd.com&body=${this.body}`;
+
+    window.location.href = `mailto:phylsully@blueyonder.co.uk?subject=Email from PSullyLtd.com&body=${body}`;
   }
 
   showEmail(){
