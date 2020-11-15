@@ -3,5 +3,16 @@
 <div class="component-container">
     <div class="routed-component {{colredBackground ? 'colored-bg' : ''}}">
         <router-outlet></router-outlet>
+
+        <div class="fb-container {{fbHidden ? 'fb-hide': ''}}" style="width: {{fbWidth}}px;">
+            <div class="fb-page" data-href="https://www.facebook.com/P-Sully-Ltd-108725880501311" data-tabs="timeline"
+                data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true"
+                data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/P-Sully-Ltd-108725880501311" class="fb-xfbml-parse-ignore">
+                    <a onclick="window.open('https://www.facebook.com/P-Sully-Ltd-108725880501311');"
+                        class="sub-heading">Facebook Page</a></blockquote>
+            </div>
+        </div>
+
     </div>
 </div>

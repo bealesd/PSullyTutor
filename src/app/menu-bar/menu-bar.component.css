@@ -37,6 +37,8 @@
 }
 
 .menu-container {
+    z-index: 9999;
+    position: relative;
     height: var(--logo-height);
     display: grid;
     grid-template-columns: minmax(auto, 200px) auto;
@@ -71,7 +73,7 @@ img {
     font-family: var( --link-font-family);
     font-size: var(--link-font-size);
     text-align: center;
-    transition: 1000ms;
+    transition: 500ms;
 }
 
 .menu-link:hover {

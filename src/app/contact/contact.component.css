@@ -1,7 +1,68 @@
-.contact-container{
-    color:white;
+:host {
+    --column-width: 45px;
+    --contact-container-grid-columns: auto;
+    --map-width: 800px;
+}
+@media screen and (max-width: 1300px) and (min-width: 1050px) {
+    :host {
+        --column-width: 40px;
+       --map-width: 600px;
+   }
 }
 
+@media screen and (max-width: 1050px) and (min-width: 750px) {
+    :host {
+        --column-width: 35px;
+       --map-width: 500px;
+   }
+}
+
+@media screen and (max-width: 750px) and (min-width: 500px) {
+     :host {
+        --column-width: 30px;
+        --map-width: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+     :host {
+        --contact-container-grid-columns: auto;
+        --column-width: 22px;
+        --left-grid-row: 1;
+        --left-grid-column: 1;
+        --map-width: 300px;
+        --map-height: 250px;
+    }
+}
+
+.wrapper         {
+    grid-column: 2;
+    grid-row: 2;
+    width:100%;
+     max-width: var(--map-width);
+      height:400px;
+       margin:auto auto;
+    }
+
+.h_iframe        {
+    position:relative;
+    }
+
+.h_iframe iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: var(--map-height);
+}
+
+.contact-container{
+    display: grid;
+    grid-template-columns: var(--contact-container-grid-columns);
+    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    color:white;
+}
 
 .contact-text {
     font-size: 16px;
@@ -35,7 +96,7 @@ input#message {
 .form {
     padding-top: 20px;
     display: grid;
-    grid-template-columns: repeat(10, 30px);
+    grid-template-columns: repeat(10, var(--column-width));
     grid-template-rows: 40px 20px 40px 20px 40px;
 }
 
@@ -59,10 +120,35 @@ input#message {
     grid-column: 7/11;
 }
 
+.left {
+    grid-row: var(--left-grid-row);
+    grid-column: var(--left-grid-column);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
 .email {
     padding-top: 20px;
 }
 
 .email:hover {
     cursor: pointer;
+}
+
+.google-map{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+} 
+
+.google-map > a:hover {
+    cursor: pointer;
+}
+
+ .map{
+    width: 100%;
+    height: auto;
+    max-width:var(--map-width);
 }

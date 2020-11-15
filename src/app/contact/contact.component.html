@@ -1,17 +1,36 @@
 <div class="contact-container">
+    <div class="left">
+        <div class="sub-heading">Telephone Number</div>
+        <div class="contact-text"> 01454 250713</div>
 
-    <div class="sub-heading">Telephone Number</div>
-    <div class="contact-text"> 01454 250713</div>
+        <div class="sub-heading email" (click)="showEmail()">Email</div>
+        <div class="contact-text">phylsully@blueyonder.co.uk</div>
 
-    <div class="sub-heading email" (click)="showEmail()">Email</div>
-    <!-- <div class="contact-text">phylsully@blueyonder.co.uk</div> -->
-
-    <div class="form">
-
-        <input type="text" id="name" placeholder="name">
-        <input type="text" id="message" size="50" placeholder="message">
-        <button class="green-button reset" (click)="reset()">Reset</button>
-        <button class="green-button send" (click)="send()">Send</button>
+        <div class="form">
+            <input type="text" id="name" placeholder="name">
+            <input type="text" id="message" size="50" placeholder="message">
+            <button class="green-button reset" (click)="reset()">Reset</button>
+            <button class="green-button send" (click)="send()">Send</button>
+        </div>
     </div>
 
+    <!-- <div class="right">
+        
+        <div class="wrapper">
+            <div class="h_iframe">
+
+                <iframe class="map" wmode=opaque
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19854.880659709095!2d-2.479281101525459!3d51.53412608660147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1605435807501!5m2!1sen!2suk"
+                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+
+    </div> -->
+
+</div>
+
+<div class="google-map">
+    <a onclick="window.open('https://goo.gl/maps/HbKsCWkthoAvBCkW8');">
+        <img class="map" title="Emmaus Church Center" alt="" src="assets/images/Frampton.jpg" border="0">
+    </a>
 </div>
