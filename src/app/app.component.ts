@@ -13,21 +13,12 @@ export class AppComponent {
   colredBackground: boolean;
   fbHidden = false;
   fbBig = false;
-  fbMedium = false;
   fbSmall = false;
 
   get isSmallShown(){
     if(this.fbHidden === true)
       return false;
     if(this.fbSmall === false)
-      return  false;
-    return true;
-  }
-
-  get isMediumShown(){
-    if(this.fbHidden === true)
-      return false;
-    if(this.fbMedium === false)
       return  false;
     return true;
   }
@@ -63,14 +54,11 @@ export class AppComponent {
 
   resizeFbContainer() {
     this.fbBig = false;
-    this.fbMedium = false;
     this.fbSmall = false;
 
     if (this.pageWidth > 700)
       this.fbBig = true;
-    else if (this.pageWidth > 500)
-      this.fbMedium = true;
-    else if (this.pageWidth < 500)
+    else if (this.pageWidth <= 700)
       this.fbSmall = true;
   }
 

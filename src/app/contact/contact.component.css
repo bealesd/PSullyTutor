@@ -1,26 +1,26 @@
 :host {
     --column-width: 45px;
     --contact-container-grid-columns: auto;
-    --map-width: calc(var(--column-width)*10);
+    --map-width: 450px
 }
 @media screen and (max-width: 1300px) and (min-width: 1050px) {
     :host {
         --column-width: 40px;
-       /* --map-width: 600px; */
+       --map-width: 450px;
    }
 }
 
-@media screen and (max-width: 1050px) and (min-width: 750px) {
+@media screen and (max-width: 1050px) and (min-width: 700px) {
     :host {
         --column-width: 35px;
-       /* --map-width: 500px; */
+       --map-width: 450px;
    }
 }
 
-@media screen and (max-width: 750px) and (min-width: 500px) {
+@media screen and (max-width: 700px) and (min-width: 500px) {
      :host {
         --column-width: 30px;
-        /* --map-width: 400px; */
+        --map-width: 280px;
     }
 }
 
@@ -129,5 +129,5 @@ input#message {
  .map{
     width: 100%;
     height: auto;
-    max-width:var(--map-width);
+    max-width: var(--map-width);
 }
