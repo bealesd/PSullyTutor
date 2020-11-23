@@ -1,26 +1,22 @@
 :host {
     --column-width: 45px;
     --contact-container-grid-columns: auto;
-    --map-width: 450px
 }
 @media screen and (max-width: 1300px) and (min-width: 1050px) {
     :host {
         --column-width: 40px;
-       --map-width: 450px;
    }
 }
 
 @media screen and (max-width: 1050px) and (min-width: 700px) {
     :host {
         --column-width: 35px;
-       --map-width: 450px;
    }
 }
 
 @media screen and (max-width: 700px) and (min-width: 500px) {
      :host {
         --column-width: 30px;
-        --map-width: 280px;
     }
 }
 
@@ -30,8 +26,6 @@
         --column-width: 22px;
         --left-grid-row: 1;
         --left-grid-column: 1;
-        --map-width: 300px;
-        --map-height: 250px;
     }
 }
 
@@ -103,7 +97,7 @@ input#message {
     grid-row: var(--left-grid-row);
     grid-column: var(--left-grid-column);
     display: grid;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
@@ -116,11 +110,16 @@ input#message {
 }
 
 .google-map{
+    color:white;
     padding-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center;  */
 } 
+
+.location{
+    padding-bottom: 10px;
+}
 
 .google-map > a:hover {
     cursor: pointer;
@@ -129,5 +128,4 @@ input#message {
  .map{
     width: 100%;
     height: auto;
-    max-width: var(--map-width);
 }
