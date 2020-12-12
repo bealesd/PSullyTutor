@@ -29,12 +29,27 @@
     }
 }
 
+.container{
+    display: grid;
+    grid-template-columns: var(--component-container-side-margin) var(--component-container-middle-col) var(--component-container-side-margin);
+}
+
 .contact-container{
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: var(--blue);
+    grid-column: 2;
     display: grid;
     grid-template-columns: var(--contact-container-grid-columns);
-    grid-row-gap: 30px;
+    /* grid-row-gap: 30px; */
     grid-column-gap: 20px;
     color:white;
+}
+
+.contact-header {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 28px;
 }
 
 .contact-text {
@@ -111,7 +126,7 @@ input#message {
 
 .google-map{
     color:white;
-    padding-top: 30px;
+    margin-top: 20px;
     /* display: flex; */
     /* justify-content: center; */
     /* align-items: center;  */

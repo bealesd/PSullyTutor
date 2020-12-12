@@ -1,42 +1,105 @@
 :host {
-    --home-text-font: 24px;
+    --home-text-font: 18px;
+    --box-one-col: 1;
+    --box-one-row: 1;
+    --box-two-col: 2;
+    --box-two-row: 1;
+    --box-three-col: 1;
+    --box-three-row: 2;
+    --box-four-col: 2;
+    --box-four-row: 2;
 }
 
 @media screen and (max-width: 700px) and (min-width: 500px) {
      :host {
-        --home-text-font: 20px;
+        --home-text-font: 16px;
+        --box-one-col: auto;
+        --box-one-row: auto;
+        --box-two-col: auto;
+        --box-two-row: auto;
+        --box-three-col: auto;
+        --box-three-row: auto;
+        --box-four-col: auto;
+        --box-four-row: auto;
+
     }
 }
 
 @media screen and (max-width: 500px) {
      :host {
-        --home-text-font: 18px;
+        --home-text-font: 14px;
+        --box-one-col: auto;
+        --box-one-row: auto;
+        --box-two-col: auto;
+        --box-two-row: auto;
+        --box-three-col: auto;
+        --box-three-row: auto;
+        --box-four-col: auto;
+        --box-four-row: auto;
     }
 }
 
+.container{
+
+
+    display: grid;
+    grid-template-columns: var(--component-container-side-margin) var(--component-container-middle-col) var(--component-container-side-margin);
+
+}
+
 .tuition-container{
+    padding:10px; 
+    border-radius: 10px;
+    
+    background-color: rgba(47, 79, 79, 0.9);
+    grid-column: 2;
     color:white;
+}
+
+.box-container{
+    display: grid;
+}
+
+.box{
+    padding: 10px;
+    border-bottom: 2px solid grey;
+}
+
+.box:nth-of-type(1){
+    grid-row: var(--box-one-row); 
+    grid-column: var(--box-one-col); 
+}
+
+.box:nth-of-type(2){
+    grid-row: var(--box-two-row); 
+    grid-column: var(--box-two-col); 
+}
+
+.box:nth-of-type(3){
+    grid-row: var(--box-three-row); 
+    grid-column: var(--box-three-col);  
+}
+
+.box:nth-of-type(4){
+    grid-row: var(--box-four-row); 
+    grid-column: var(--box-four-col); 
+}
+
+.sub-heading{
+    color: lime;
 }
 
 .tuition-header {
     padding-top: 7px;
     padding-bottom: 7px;
     font-size: 28px;
+    color: lime;
 }
 
-.tuition-header>span {
+.tuition-header > span {
     text-decoration: none;
     border-bottom: transparent 2px solid;
     transition: 1000ms;
-}
-
-.tuition-header>span:hover {
-    border-bottom: white 2px solid;
-    /* cursor: pointer; */
-}
-
-.tuition-header:hover {
-    cursor: pointer;
 }
 
 .tuition-text {

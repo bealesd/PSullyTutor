@@ -6,10 +6,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-bar.component.css']
 })
 export class MenuBarComponent implements OnInit {
+  isModalOpen: boolean;
+  modalMessage: string;
+  modalValue: string;
 
-  constructor() { }
+  constructor() {
+    this.isModalOpen = false;
+  }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  openNewWindow(link) {
+    window.open(link);
+  }
+
+  openModal(message, value) {
+    this.isModalOpen = true;
+    this.modalMessage = message;
+    this.modalValue = value;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    this.modalMessage = '';
+    this.modalValue = '';
   }
 
 }

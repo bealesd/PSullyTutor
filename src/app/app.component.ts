@@ -12,8 +12,11 @@ export class AppComponent {
   title = 'psullytutor';
   colredBackground: boolean;
   isfbHidden = true;
+  date: Date;
 
   constructor(router: Router) {
+    this.date = new Date();
+
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
         if (['testimonials', 'home', ''].includes(event.url.split('/')[1]))

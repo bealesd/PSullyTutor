@@ -27,26 +27,16 @@
 app-menu-bar {
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .component-container {
     margin-bottom: 20px;
-    margin-top: calc(var(--logo-height) + var(--component-container-margin-top));
-    display: grid;
-    /* width: 100vw; */
-    grid-template-columns: var(--component-container-side-margin) var(--component-container-middle-col) var(--component-container-side-margin);
+    margin-top: calc(30px * 2 + 50px);
 }
 
 .routed-component {
-    grid-column: 2;
-    padding: 10px;
     color: black;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.colored-bg {
-    background-color: var(--blue);
 }
 
 .fb-hide{
@@ -54,13 +44,14 @@ app-menu-bar {
 }
 
 .fb-container{
-    /* margin: 0 auto; */
     color: white;
-    margin-top: 20px;
+    margin-top: 20px;    
 }
 
-.fb-container > .sub-heading{
-    padding-bottom: 10px;
+.fb-container  .contact-header{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 28px;
 }
 
 .fb-container a{
@@ -78,4 +69,9 @@ app-menu-bar {
 
 .fb-container a:active{
     text-decoration: none;
+}
+
+footer{
+    font-size: 10px;
+    text-align: center;
 }

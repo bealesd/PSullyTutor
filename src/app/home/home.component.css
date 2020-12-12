@@ -14,7 +14,13 @@
     }
 }
 
+.container{
+    display: grid;
+    grid-template-columns: var(--component-container-side-margin) var(--component-container-middle-col) var(--component-container-side-margin);
+}
+
 .home-container {
+    grid-column: 2;
     display: grid;
 }
 
@@ -25,38 +31,38 @@
     grid-template-columns: 100px auto;
 }
 
-.text-box:nth-of-type(1)>.home-text {
+.text-box:nth-of-type(2)>.home-text {
     background-color: var(--green);
 }
 
-.text-box:nth-of-type(2)>.home-text {
+.text-box:nth-of-type(3)>.home-text {
     background-color: var(--red);
 }
 
-.text-box:nth-of-type(3)>.home-text {
+.text-box:nth-of-type(4)>.home-text {
     background-color: var(--blue);
 }
 
-.text-box:nth-of-type(4)>.home-text {
+.text-box:nth-of-type(5)>.home-text {
     background-color: var(--yellow);
 }
 
-.text-box:nth-of-type(1)>.number {
+.text-box:nth-of-type(2)>.number {
     border: var(--green) 2px solid;
     color: var(--green);
 }
 
-.text-box:nth-of-type(2)>.number {
+.text-box:nth-of-type(3)>.number {
     border: var(--red) 2px solid;
     color: var(--red);
 }
 
-.text-box:nth-of-type(3)>.number {
+.text-box:nth-of-type(4)>.number {
     border: var(--blue) 2px solid;
     color: var(--blue);
 }
 
-.text-box:nth-of-type(4)>.number {
+.text-box:nth-of-type(5)>.number {
     border: var(--yellow) 2px solid;
     color: var(--yellow);
 }

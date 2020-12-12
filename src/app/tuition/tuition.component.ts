@@ -13,8 +13,7 @@ export class TuitionComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {  }
 
   showText(evt) {
     const id = evt.target.id;

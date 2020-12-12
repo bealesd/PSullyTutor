@@ -1,8 +1,7 @@
 @font-face {
     font-family: 'Roboto';
     src:
-      url('assets/fonts/roboto-v20-latin-regular.woff') format('woff'),
-      url('assets/fonts/roboto-v20-latin-regular.woff2') format('woff2');
+      url('assets/fonts/roboto-v20-latin-regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -11,15 +10,83 @@
   @font-face {
     font-family: 'Space Mono';
     src:
-      url('assets/fonts/space-mono-v6-latin-regular.woff') format('woff'),
-      url('assets/fonts/space-mono-v6-latin-regular.woff2') format('woff2');
+      url('assets/fonts/space-mono-v6-latin-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'icomoon';
+    src:
+      url('assets/fonts/icomoon.woff?xnz0bb') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-home:before {
+    content: "\e900";
+  }
+
+  .icon-phone:before {
+    content: "\e942";
+  }
+
+  .icon-address-book:before {
+    content: "\e944";
+  }
+
+  .icon-envelop:before {
+    content: "\e945";
+  }
+
+.icon-location:before {
+    content: "\e947";
+  }
+  .icon-location2:before {
+    content: "\e948";
+  }
+  .icon-cross:before {
+    content: "\ea0f";
+  }
+  .icon-checkmark:before {
+    content: "\ea10";
+  }
+  .icon-arrow-up2:before {
+    content: "\ea3a";
+  }
+  .icon-arrow-right2:before {
+    content: "\ea3c";
+  }
+  .icon-arrow-down2:before {
+    content: "\ea3e";
+  }
+  .icon-arrow-left2:before {
+    content: "\ea40";
+  }
+  .icon-google2:before {
+    content: "\ea89";
+  }
+  .icon-facebook2:before {
+    content: "\ea91";
+  }
+
 :root {
-    --logo-height: 100px;
+    --logo-height: 80px;
 }
 
 @media screen and (max-width: 900px) and (min-width: 700px) {
@@ -30,19 +97,19 @@
 
 @media screen and (max-width: 700px) and (min-width: 500px) {
      :root {
-        --logo-height: 55px;
+        --logo-height: 70px;
     }
 }
 
 @media screen and (max-width: 500px) and (min-width: 400px) {
      :root {
-        --logo-height: 50px;
+        --logo-height: 60px;
     }
 }
 
 @media screen and (max-width: 400px) {
      :root {
-        --logo-height: 40px;
+        --logo-height: 50px;
     }
 }
 

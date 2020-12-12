@@ -1,18 +1,25 @@
-import { Component, OnInit } from '@angular/core';
- 
+import { Component, OnDestroy, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
   newline = '%0D%0A';
   fbWidth = '250';
+  fbNode = document.querySelector('.fb-container');
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+      document.querySelector('.contact-container').appendChild(this.fbNode);
+  }
+
+  ngOnDestroy(){
+    document.querySelector('.component-container').appendChild(this.fbNode);
+  }
 
   get body() {
     const name = (<any>document.querySelector('#name')).value;
