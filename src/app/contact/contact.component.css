@@ -83,6 +83,7 @@ input#message {
 
 .form {
     padding-top: 20px;
+    padding-bottom: 20px;
     display: grid;
     grid-template-columns: repeat(10, var(--column-width));
     grid-template-rows: 40px 20px 40px 20px 40px;
@@ -112,7 +113,6 @@ input#message {
     grid-row: var(--left-grid-row);
     grid-column: var(--left-grid-column);
     display: grid;
-    /* justify-content: center; */
     align-items: center;
 }
 
@@ -124,12 +124,9 @@ input#message {
     cursor: pointer;
 }
 
-.google-map{
+/* .google-map{
     color:white;
     margin-top: 20px;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center;  */
 } 
 
 .location{
@@ -143,4 +140,4 @@ input#message {
  .map{
     width: 100%;
     height: auto;
-}
+} */

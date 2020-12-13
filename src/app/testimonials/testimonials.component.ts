@@ -48,10 +48,12 @@ export class TestimonialsComponent implements OnInit, AfterViewInit {
       while (height > this.textHeight) {
         if (firstRun) {
           div.innerText += '...';
+          div.classList.add('expand-testimonial');
           firstRun = false;
         }
 
-        div.innerText = div.innerText.slice(0, -3).slice(0, -1) + '...'
+        div.innerText = div.innerText.slice(0, -3).slice(0, -1) + '...';
+        div.classList.add('expand-testimonial');
         height = (div.clientHeight + 1);
       }
       this.shorttestimonialTexts.push(div.innerText);
@@ -60,6 +62,9 @@ export class TestimonialsComponent implements OnInit, AfterViewInit {
 
   expand(evt, i) {
     let div = evt.target as HTMLDivElement;
+
+    if (!div.classList.contains('expand-testimonial'))
+      return;
 
     let height = (div.clientHeight + 1);
     if (height < this.textHeight)

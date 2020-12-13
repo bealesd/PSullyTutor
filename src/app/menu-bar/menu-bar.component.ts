@@ -34,6 +34,7 @@ export class MenuBarComponent implements OnInit {
   }
 
   openModal(message, value) {
+    value = value.replace("@", '<span class="at-symbol">@</span>');
     this.isModalOpen = true;
     this.modalMessage = message;
     this.modalValue = value;

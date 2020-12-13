@@ -35,7 +35,7 @@ app-menu-bar {
     color: black;
 }
 
-.fb-hide{
+/* .fb-hide{
     display: none;
 }
 
@@ -65,7 +65,7 @@ app-menu-bar {
 
 .fb-container a:active{
     text-decoration: none;
-}
+} */
 
 footer{
     font-size: 10px;

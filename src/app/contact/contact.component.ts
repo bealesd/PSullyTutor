@@ -14,11 +14,11 @@ export class ContactComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
-      document.querySelector('.contact-container').appendChild(this.fbNode);
+      // document.querySelector('.contact-container').appendChild(this.fbNode);
   }
 
   ngOnDestroy(){
-    document.querySelector('.component-container').appendChild(this.fbNode);
+    // document.querySelector('.component-container').appendChild(this.fbNode);
   }
 
   get body() {
@@ -39,15 +39,17 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   send() {
     const body = this.body;
-    if (body === '') {
+    if (body === '')
       return;
-    }
-
     window.location.href = `mailto:phylsully@blueyonder.co.uk?subject=Email from PSullyLtd.com&body=${body}`;
   }
 
   showEmail() {
     alert('phylsully@blueyonder.co.uk');
+  }
+
+  openNewWindow(link) {
+    window.open(link);
   }
 
 }

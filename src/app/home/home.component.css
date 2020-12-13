@@ -44,7 +44,11 @@
 }
 
 .text-box:nth-of-type(5)>.home-text {
-    background-color: var(--yellow);
+    background-color: rgba(255, 122, 0, 0.8);
+}
+
+.text-box>.number{
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .text-box:nth-of-type(2)>.number {
@@ -63,8 +67,8 @@
 }
 
 .text-box:nth-of-type(5)>.number {
-    border: var(--yellow) 2px solid;
-    color: var(--yellow);
+    border: rgba(221, 122, 0, 0.8) 2px solid;
+    color: rgba(255, 122, 0, 0.8);
 }
 
 .home-text {
@@ -75,7 +79,6 @@
     font-size: var(--home-text-font);
     grid-column: 2;
     color: white;
-    /* text-shadow: 1px 1px black; */
 }
 
 .home-text-header {
@@ -85,7 +88,8 @@
 
 .number {
     font-family: inherit;
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: bold;
     grid-column: 1;
     display: flex;
     justify-content: center;
