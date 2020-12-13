@@ -5,10 +5,10 @@
   </div>
 
   <div class="link-container">
-    <div class="menu-link home icon-home" [routerLink]="['/home']"></div>
-    <div class="menu-link tuition" [routerLink]="['/tuition']">Tuition</div>
-    <div class="menu-link testimonial" [routerLink]="['/testimonials']">Feedback</div>
-    <div class="menu-link contact" [routerLink]="['/contact']">Contact</div>
+    <div class="menu-link home icon-home" routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"></div>
+    <div class="menu-link tuition" [routerLink]="['/tuition']" routerLinkActive="active-link">Tuition</div>
+    <div class="menu-link testimonial" [routerLink]="['/testimonials']" routerLinkActive="active-link">Feedback</div>
+    <div class="menu-link contact" [routerLink]="['/contact']" routerLinkActive="active-link">Contact</div>
   </div>
 
   <div class="info-bar">

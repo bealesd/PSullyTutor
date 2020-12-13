@@ -89,7 +89,6 @@
 }
 
 .logo-container img:hover {
-    background-color: hotpink;
     cursor: pointer;
 }
 
@@ -142,6 +141,26 @@ img {
 }
 
 .menu-link:nth-of-type(4):hover {
+    background-color: var(--yellow);
+}
+
+.active-link{
+    color: white;
+}
+
+.home.active-link{
+    background-color: var(--green);
+}
+
+.tuition.active-link{
+    background-color: var(--red);
+}
+
+.testimonial.active-link{
+    background-color: var(--blue);
+}
+
+.contact.active-link{
     background-color: var(--yellow);
 }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-bar',
@@ -13,8 +14,17 @@ export class MenuBarComponent implements OnInit {
   modalBigMessage: any;
   modalBigValue: any;
 
-  constructor() {
+  constructor(private router: Router) {
     this.isModalOpen = false;
+
+    // this.router.events.subscribe((val) => {
+    //   if (val instanceof NavigationEnd) {
+    //     if (document.querySelectorAll('.link-container .active-link').length === 0) 
+    //       document.querySelector('.menu-link.home').classList.add('active-link');
+    //     else 
+    //       document.querySelector('.menu-link.home').classList.remove('active-link');
+    //   }
+    // })
   }
 
   ngOnInit() { }
