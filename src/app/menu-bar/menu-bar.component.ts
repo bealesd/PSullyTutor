@@ -9,6 +9,9 @@ export class MenuBarComponent implements OnInit {
   isModalOpen: boolean;
   modalMessage: string;
   modalValue: string;
+  isModalBigOpen: boolean;
+  modalBigMessage: any;
+  modalBigValue: any;
 
   constructor() {
     this.isModalOpen = false;
@@ -30,6 +33,18 @@ export class MenuBarComponent implements OnInit {
     this.isModalOpen = false;
     this.modalMessage = '';
     this.modalValue = '';
+  }
+
+  openModalBig(message, value) {
+    this.isModalBigOpen = true;
+    this.modalBigMessage = message;
+    this.modalBigValue = value;
+  }
+
+  closeModalBig() {
+    this.isModalBigOpen = false;
+    this.modalBigMessage = '';
+    this.modalBigValue = '';
   }
 
 }

@@ -4,10 +4,6 @@
     --component-container-margin-top: 20px;
     --navbar-bg-color: rgb(238, 238, 238);
     --main-container-bg-color: rgba(238, 238, 238, 0.9);
-    --yellow: rgba(255, 132, 0, 0.7);
-    --blue: rgba(0, 14, 214, 0.7);
-    --red: rgba(255, 0, 0, 0.7);
-    --green: rgba(0, 131, 11, 0.7);
 }
 
 @media screen and (max-width: 900px) and (min-width: 700px) {

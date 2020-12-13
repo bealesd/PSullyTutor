@@ -2,6 +2,7 @@
     --link-font-size: 30px;
     --link-font-family: 'Roboto';
     --link-padding: 10px 20px;
+    --header-font-size: 16px;
 }
 
 @media screen and (max-width: 900px) and (min-width: 700px) {
@@ -9,14 +10,16 @@
         --link-font-size: 28px;
         --link-font-family: 'Roboto';
         --link-padding: 10px 16px;
+        --header-font-size: 16px;
     }
 }
 
 @media screen and (max-width: 700px) and (min-width: 500px) {
      :host {
         --link-font-size: 22px;
-        --link-font-family: 'Arial-Narrow';
+        --link-font-family: 'Roboto';
         --link-padding: 10px 14px;
+        --header-font-size: 14px;
     }
 }
 
@@ -25,6 +28,7 @@
         --link-font-size: 18px;
         --link-font-family: 'Arial-Narrow';
         --link-padding: 10px 8px;
+        --header-font-size: 12px;
     }
 }
 
@@ -33,6 +37,7 @@
         --link-font-size: 18px;
         --link-font-family: 'Arial-Narrow';
         --link-padding: 10px 5px;
+        --header-font-size: 12px;
     }
 }
 
@@ -60,6 +65,11 @@
     margin-right: 10px;
 }
 
+.info-bar .name{
+    font-size: var(--header-font-size);
+    font-family: var(--link-font-family);
+}
+
 [class^="icon-"]{
     font-size: 22px;
     color: blue;
@@ -78,6 +88,15 @@
     margin-bottom: auto;
 }
 
+.logo-container img:hover {
+    background-color: hotpink;
+    cursor: pointer;
+}
+
+.logo-container img:focus {
+    outline: none;
+}
+
 img {
     height: var(--logo-height);
 }
@@ -87,7 +106,6 @@ img {
     grid-column: 2;
     display: grid;
     grid-template-columns: repeat(4, min-content) auto;
-    /* border: 1px solid grey; */
     border-radius: 30px 00px 00px 30px;
     background-color: var(--navbar-bg-color);
     align-content: center;
@@ -147,8 +165,8 @@ img {
 
 
 .modal {
-    --width: 350px;
-    --height: 130px;
+    --width: 300px;
+    --height: 100px;
 
     z-index: 9999;
     position: fixed;
@@ -219,6 +237,85 @@ img {
 
 .modal>button.btn-normal:focus,
 .modal>button.btn-normal:active {
+    outline: 0;
+    border: none;
+}
+
+
+
+.modal-big {
+    --width: 350px;
+    --height: 200px;
+
+    z-index: 9999;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    width: var(--width);
+    height: var(--height);
+
+    z-index: 9999;
+    top: 50%;
+    width: var(--width);
+    left: 50%;
+    margin-top: calc(-0.5 * var(--height));
+    margin-left: calc(-0.5 * var(--width));
+
+    background-color: lightgray;
+    box-shadow: green 5px 5px;  
+}
+
+#modal-big-message {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: left;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 5px;
+}
+
+#modal-big-value {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.modal-big>button {
+    height: 30px;
+    width: 70px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.modal-big>button.btn-normal {
+    background-color: #4CAF50;
+    border: 1px solid green;
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.modal-big>button.btn-normal:hover {
+    background-color: darkgreen;
+    border: 1px solid #1fb123;
+}
+
+.modal-big>button.btn-normal:focus,
+.modal-big>button.btn-normal:active {
     outline: 0;
     border: none;
 }
