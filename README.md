@@ -20,6 +20,6 @@ Routing will not work when deployed to DNS.
  - ng build --prod --output-path docs --base-href "https://www.psullyltd.com"
 
 ### Current build option
-npm run build:prod
-
-N.B. don't delete CNAME, 404.html, robots.txt, sitemap.txt
+ - npm run build:prod
+ - always serve docs folder locally to ensure it works.
+ - don't delete CNAME, 404.html, robots.txt, sitemap.txt ever
