@@ -1,6 +1,6 @@
 # Psullytutor
 
-An angular project.
+An angular project for a math tuition site. Four pages of content. Using Scully to make angular dist content static. Using GitHub pages to serve content and goDaddy as a DNS.
 
 ---
 
@@ -12,22 +12,13 @@ ng serve --open
 
 ## Build
 
-## failing build options
-
-Routing will not work when deployed to DNS.
-
- - ng build --prod --output-path docs --base-href "/PSullyTutor/" 
- - ng build --prod --output-path docs --base-href "https://www.psullyltd.com"
-
-### Current build option
-
-#### SPA
+### SPA
  - npm run build:prod
 
-#### Static
+### Static
  - npm run build:scully
  - npm run scully
 
-#### Notes
+### Notes
  - always serve docs folder locally to ensure it works.
  - don't delete CNAME, 404.html, robots.txt, sitemap.txt!
