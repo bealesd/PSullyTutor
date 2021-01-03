@@ -39,52 +39,34 @@
     cursor: pointer !important;
 }
 
-.testimonial-text:nth-of-type(1)>div,
-.testimonial-text:nth-of-type(5)>div,
-.testimonial-text:nth-of-type(9)>div,
-.testimonial-text:nth-of-type(13)>div {
+.testimonial-text:nth-child(4n+1)>div{
     background-color: var(--green);
 }
 
-.testimonial-text:nth-of-type(1)>.expand-testimonial:hover,
-.testimonial-text:nth-of-type(5)>.expand-testimonial:hover,
-.testimonial-text:nth-of-type(9)>.expand-testimonial:hover,
-.testimonial-text:nth-of-type(13)>.expand-testimonial:hover {
+.testimonial-text:nth-child(4n+1)>div:hover{
     background-color:green;
 }
 
-.testimonial-text:nth-of-type(2)>div,
-.testimonial-text:nth-of-type(6)>div,
-.testimonial-text:nth-of-type(10)>div {
+.testimonial-text:nth-child(4n+2)>div{
     background-color: var(--red);
 }
 
-.testimonial-text:nth-of-type(2)>.expand-testimonial:hover,
-.testimonial-text:nth-of-type(6)>.expand-testimonial:hover,
-.testimonial-text:nth-of-type(10)>.expand-testimonial:hover {
+.testimonial-text:nth-child(4n+2)>div:hover{
     background-color: red;
 }
 
-.testimonial-text:nth-of-type(3)>div,
-.testimonial-text:nth-of-type(7)>div,
-.testimonial-text:nth-of-type(11)>div {
+.testimonial-text:nth-child(4n+3)>div{
     background-color: var(--blue);
 }
 
-.testimonial-text:nth-of-type(3) .expand-testimonial:hover,
-.testimonial-text:nth-of-type(7) .expand-testimonial:hover,
-.testimonial-text:nth-of-type(11) .expand-testimonial:hover {
+.testimonial-text:nth-child(4n+3)>div:hover{
     background-color: blue;
 }
 
-.testimonial-text:nth-of-type(4)>div,
-.testimonial-text:nth-of-type(8)>div,
-.testimonial-text:nth-of-type(12)>div {
+.testimonial-text:nth-child(4n+4)>div{
     background-color: var(--yellow);
 }
 
-.testimonial-text:nth-of-type(4)>.expand-testimonial:hover,
-.testimonial-text:nth-of-type(8)>.expand-testimonial:hover,
-.testimonial-text:nth-of-type(12)>.expand-testimonial:hover {
+.testimonial-text:nth-child(4n+4)>div:hover{
     background-color: orange;
 }
