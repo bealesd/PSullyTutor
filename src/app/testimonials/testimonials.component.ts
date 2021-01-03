@@ -52,54 +52,51 @@ export class TestimonialsComponent implements OnInit, AfterViewInit {
     'We are really happy with our daughter’s progress. She did a Maths mock on Tuesday and was told yesterday that she had got a C but she did leave quite a few questions out, and after her lesson on Tuesday evening with you, she said that you had covered everything in the exam that she could not answer, so hopefully will do even better with the exam next time. She is really enjoying her lessons.'
   ]
 
-  shorttestimonialTexts = [];
+  shortTestimonialTexts = [];
   textHeight = 200;
 
-  constructor() {
-    fromEvent(window, 'resize').pipe(debounceTime(300))
-      .subscribe(() => this.trimText());
-  }
+  constructor() { }
 
   ngOnInit() { }
 
   ngAfterViewInit() {
-    this.trimText()
+    this.trimText();
+    fromEvent(window, 'resize').pipe(debounceTime(100))
+      .subscribe(() => this.trimText());
   }
 
   trimText() {
-    const test = document.querySelectorAll('.testimonial-text > div') as any;
-    [...test].forEach((el, i) => {
-      const div = el as HTMLDivElement;
-      if (div.innerText.slice(0, -3) === '...')
-        div.innerText = this.testimonialTexts[i];
+    const testimonials = document.querySelectorAll('.testimonial-text > div') as any;
+    for (const testimonial of testimonials) {
+      let height = testimonial.clientHeight + 1;
 
-      let height = (div.clientHeight + 1);
       let firstRun = true;
       while (height > this.textHeight) {
         if (firstRun) {
-          div.innerText += '...';
-          div.classList.add('expand-testimonial');
+          // if text height >200, append '...' and add expansion class
+          testimonial.innerText += '...';
+          testimonial.classList.add('expand-testimonial');
           firstRun = false;
         }
-
-        div.innerText = div.innerText.slice(0, -3).slice(0, -1) + '...';
-        div.classList.add('expand-testimonial');
-        height = (div.clientHeight + 1);
+        // remove 9 chars from text (9 chars + 3 dots, for efficiency), then recalculate height of box.
+        testimonial.innerText = testimonial.innerText.slice(0, -12) + '...';
+        height = testimonial.clientHeight + 1;
       }
-      this.shorttestimonialTexts.push(div.innerText);
-    })
+
+      this.shortTestimonialTexts.push(testimonial.innerText);
+    }
   }
 
   expand(evt, i) {
-    let div = evt.target as HTMLDivElement;
+    const div = evt.target as HTMLDivElement;
 
     if (!div.classList.contains('expand-testimonial'))
       return;
 
-    let height = (div.clientHeight + 1);
+    const height = (div.clientHeight + 1);
     if (height < this.textHeight)
       div.innerText = this.testimonialTexts[i];
     else
-      div.innerText = this.shorttestimonialTexts[i];
+      div.innerText = this.shortTestimonialTexts[i];
   }
 }
