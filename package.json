@@ -6,9 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod --output-path docs --base-href \"/\" ",
+    "build:scully": "ng build --base-href \"/\" ",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "scully": "scully",
+    "scully:serve": "scully serve"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +23,9 @@
     "@angular/platform-browser": "~11.0.0",
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
+    "@scullyio/init": "^1.0.1",
+    "@scullyio/ng-lib": "^1.0.0",
+    "@scullyio/scully": "^1.0.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.6.3",
     "tslib": "^1.9.0",
