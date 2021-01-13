@@ -1,4 +1,5 @@
-https://psullyltd.com/home
-https://psullyltd.com/tuition
-https://psullyltd.com/testimonials
-https://psullyltd.com/contact
+https://psullyltd.com/index.html
+https://psullyltd.com/home/index.html
+https://psullyltd.com/tuition/index.html
+https://psullyltd.com/testimonials/index.html
+https://psullyltd.com/contact/index.html
