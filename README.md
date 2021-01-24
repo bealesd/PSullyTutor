@@ -13,12 +13,12 @@ ng serve --open
 ## Build
 
 ### SPA
- - npm run build:prod
+ 1. npm run build:prod
 
 ### Static
- - npm run build:scully
- - npm run scully
+ 1. npm run build:scully
+ 2. npm run scully
 
 ### Notes
- - always serve docs folder locally to ensure it works.
+ - always serve **docs** folder locally to ensure it works.
  - don't delete CNAME, 404.html, robots.txt, sitemap.txt!
