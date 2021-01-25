@@ -3,6 +3,7 @@
     --link-font-family: 'Roboto';
     --link-padding: 10px 20px;
     --header-font-size: 16px;
+    --icon-links-font-size: 26px;
 }
 
 @media screen and (max-width: 900px) and (min-width: 700px) {
@@ -11,6 +12,7 @@
         --link-font-family: 'Roboto';
         --link-padding: 10px 16px;
         --header-font-size: 16px;
+        --icon-links-font-size: 24px;
     }
 }
 
@@ -20,6 +22,7 @@
         --link-font-family: 'Roboto';
         --link-padding: 10px 14px;
         --header-font-size: 14px;
+        --icon-links-font-size: 22px;
     }
 }
 
@@ -29,6 +32,7 @@
         --link-font-family: 'Arial-Narrow';
         --link-padding: 10px 8px;
         --header-font-size: 12px;
+        --icon-links-font-size: 22px;
     }
 }
 
@@ -38,6 +42,7 @@
         --link-font-family: 'Arial-Narrow';
         --link-padding: 10px 5px;
         --header-font-size: 12px;
+        --icon-links-font-size: 18px;
     }
 }
 
@@ -71,7 +76,7 @@
 }
 
 [class^="icon-"]{
-    font-size: 22px;
+    font-size: var(--icon-links-font-size);
     color: blue;
 }
 
@@ -186,13 +191,13 @@ img {
 
 .modal {
     --width: 300px;
-    --height: 100px;
+    --height: 120px;
 
     z-index: 9999;
     position: fixed;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 40px 40px 40px;
     
     width: var(--width);
     height: var(--height);
@@ -262,7 +267,6 @@ img {
 }
 
 
-
 .modal-big {
     --width: 350px;
     --height: 200px;
@@ -271,10 +275,10 @@ img {
     position: fixed;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-rows: 10px auto 40px;
     width: var(--width);
-    height: var(--height);
+    /* height: var(--height); */
 
     z-index: 9999;
     top: 50%;
