@@ -1,0 +1,47 @@
+# This is a basic workflow that is manually triggered
+
+name: manual
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      build-static-website:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Build Static Website?'
+        # Default value if no value is explicitly provided
+        default: 'no'
+        # Input has to be provided for the workflow to run
+        # could ask do you want to build scully static app, if yes then continue, else do nothing
+        required: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  building-static-websit:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Runs a single command using the runners shell
+    - name: Build Static Website Choice
+      run: echo "Did you want to build static website: ${{ github.event.inputs.build-static-website }}"
+
+    - name: Build Static Website
+      if:  github.event.inputs.build-static-website != 'no'
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name: Checkout branch
+      uses: actions/checkout@v2
+    - name: Setup node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: Generate Scully Static Website
+    - run: yarn
+    - run: yarn add -g @angular/cli > /dev/null
+    - run: yarn run build:scully
+    - run: yarn run scully
+
