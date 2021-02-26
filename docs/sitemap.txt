@@ -3,3 +3,8 @@ https://psullyltd.com/home/index.html
 https://psullyltd.com/tuition/index.html
 https://psullyltd.com/testimonials/index.html
 https://psullyltd.com/contact/index.html
+http://psullyltd.com/index.html
+http://psullyltd.com/home/index.html
+http://psullyltd.com/tuition/index.html
+http://psullyltd.com/testimonials/index.html
+http://psullyltd.com/contact/index.html

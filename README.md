@@ -16,8 +16,8 @@ ng serve --open
  1. npm run build:prod
 
 ### Static
- 1. npm run build:scully
- 2. npm run scully
+ 1. yarn run
+ 2. yarn run scully
 
 ### Notes
  - always serve **docs** folder locally to ensure it works.
